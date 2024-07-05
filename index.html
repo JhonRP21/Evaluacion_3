@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta de Viaje</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="cabecera">
+        <img src="img/tepsa1.jpeg" width="100%" alt="Logo TEPSA">
+    </div>
+
+    <h1>Boleta de Viaje</h1>
+
+    <form id="formBoleta">
+        <div class="form-group">
+            <label for="ruta">Selecciona la ruta:</label>
+            <select id="ruta">
+                <option value="lima-mala">Lima - Mala</option>
+                <option value="lima-canete">Lima - Cañete</option>
+                <option value="lima-chincha">Lima - Chincha</option>
+                <option value="lima-pisco">Lima - Pisco</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="servicio">Selecciona el tipo de servicio:</label>
+            <select id="servicio">
+                <option value="economica">Económico</option>
+                <option value="ejecutivo">Ejecutivo</option>
+                <option value="presidencial">Presidencial</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cantidad">Cantidad de pasajes:</label>
+            <input type="number" id="cantidad" value="1" min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="pago">Medio de pago:</label>
+            <select id="pago">
+                <option value="efectivo">Efectivo</option>
+                <option value="credito">Tarjeta crédito</option>
+                <option value="debito">Tarjeta débito</option>
+            </select>
+        </div>
+
+        <div class="form-buttons">
+            <button type="button" onclick="calcularTotal()">Calcular</button>
+            <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+        </div>
+    </form>
+
+    <div id="resultado" class="resultado">
+        <p>Total en Soles: <span id="totalSoles" style="color: blue;"></span></p>
+        <p>Total en Dólares: <span id="totalDolares" style="color: green;"></span></p>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
